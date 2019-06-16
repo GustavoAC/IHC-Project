@@ -1,0 +1,14 @@
+.user-photo:hover .user-photo-button {
+  visibility: visible;
+}
+
+.user-photo-button {
+  background-color: #0006;
+  width: 100%;
+  height: 50%;
+  cursor: pointer;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  padding-top: "10px";
+}
