@@ -1,56 +1,60 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuestionCircle } from '@fortawesome/fontawesome-free-solid';
-import colors from '../../assets/resources/colors';
+import React from "react";
+import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import colors from "../assets/resources/colors";
 
 const styles = {
   ok: {
-    width: '100%',
-    height: '40px',
-    border: 'none',
-    borderRadius: '4px',
-    fontSize: '16px',
-    fontWeight: '400',
-    lineHeight: 'normal',
-    backgroundColor: '#F2F2F2',
+    width: "100%",
+    height: "40px",
+    border: "none",
+    borderRadius: "4px",
+    fontSize: "16px",
+    fontWeight: "400",
+    lineHeight: "normal",
+    backgroundColor: "white",
     color: colors.black,
-    outline: 'none',
-    textIndent: '10px',
+    outline: "none",
+    textIndent: "10px"
   },
 
   bottomMargin: {
-    marginBottom: '10px',
+    marginBottom: "10px"
   },
 
   error: {
-    boxShadow: `0px 0px 0px 1px ${colors.red}`,
-  },
+    boxShadow: `0px 0px 0px 1px ${colors.red}`
+  }
 };
 
-const TextInputWLabel = (props) => {
+const TextInputWLabel = props => {
   const {
-    validator, secured, label, noBottomMargin, placeholder, tip, value, onChange,
+    validator,
+    secured,
+    label,
+    noBottomMargin,
+    placeholder,
+    icon,
+    value,
+    onChange
   } = props;
 
   const styleError = validator(value) ? {} : styles.error;
   const styleMargin = noBottomMargin ? {} : styles.bottomMargin;
   const style = { ...styles.ok, ...styleError, ...styleMargin };
-  const type = secured ? 'password' : 'text';
+  const type = secured ? "password" : "text";
 
-  const tipItem = tip ? (
-    <FontAwesomeIcon title={tip} icon={faQuestionCircle} color={colors.black} />
+  const tipItem = icon ? (
+    <FontAwesomeIcon icon={icon} color={colors.black} />
   ) : null;
 
-  const myOnChange = (event) => {
+  const myOnChange = event => {
     onChange(event.target.value);
   };
 
   return (
-    <label style={{ color: colors.black, width: '100%' }}>
-      {label}
-      {' '}
-      {tipItem}
+    <label style={{ color: colors.black, width: "100%" }}>
+      {tipItem} {label}
       <input
         value={value}
         onChange={myOnChange}
@@ -70,7 +74,7 @@ TextInputWLabel.propTypes = {
   value: PropTypes.any.isRequired,
   validator: PropTypes.func,
   noBottomMargin: PropTypes.bool,
-  tip: PropTypes.string,
+  tip: PropTypes.string
 };
 
 TextInputWLabel.defaultProps = {
@@ -78,8 +82,8 @@ TextInputWLabel.defaultProps = {
   validator: () => true,
   onChange: () => {},
   noBottomMargin: false,
-  placeholder: '',
-  tip: undefined,
+  placeholder: "",
+  tip: undefined
 };
 
 export default TextInputWLabel;

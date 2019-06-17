@@ -30,11 +30,11 @@ const renderItem = item => (
 
 const retrieveKey = item => item.url;
 
-const AttendanceList = () => {
+const MyAttendances = () => {
   return (
     <Div style={{ flexDirection: "column" }}>
       <Text fontSize="30px" fontWeight="bold" toCenter>
-        Lista de Atendimentos
+        Meus Atendimentos
       </Text>
       <Div style={{ width: "1000px", alignSelf: "center" }}>
         <List data={mockData} render={renderItem} retrieveKey={retrieveKey} />
@@ -43,4 +43,4 @@ const AttendanceList = () => {
   );
 };
 
-export default AttendanceList;
+export default MyAttendances;

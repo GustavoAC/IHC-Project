@@ -12,15 +12,15 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     backgroundColor: colors.white,
-    boxShadow: `1px 1px 2px ${colors.back}`,
-    padding: "10px 0px"
+    padding: "10px 0px",
+    borderBottom: "1px solid black"
   },
 
   headerDiv: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: 'center',
+    alignItems: "center",
     margin: 0,
     padding: "0px 10px",
     minHeight: "60px",
@@ -59,6 +59,7 @@ class Navbar extends PureComponent {
           alignItems: "center",
           margin: "0px 0px 0px 5px"
         }}
+        onClick={this.props.sidebarToggle}
       >
         <FontAwesomeIcon icon={faBars} size="2x" />
       </Div>
