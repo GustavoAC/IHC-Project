@@ -11,6 +11,8 @@ import AttendanceList from "./screens/attendanceList";
 import MyAttendances from "./screens/myAttendances";
 import Attendance from "./screens/attendance";
 import RegisterAttendance from "./screens/registerAttendance";
+import Notificacoes from "./screens/notificacoes";
+import Calendar from "./screens/calendar";
 import Div from "./components/Div";
 
 const styles = {
@@ -36,6 +38,7 @@ class App extends Component {
         style={{
           margin: "0px 0px 0px 10px",
           height: "81px",
+          cursor: "pointer",
           alignItems: "center"
         }}
         onClick={this.toggleSidebar}
@@ -48,6 +51,9 @@ class App extends Component {
       </a>
       <a href="/atendimentos" style={styles.toolbarLink}>
         Listagem de Atendimentos
+      </a>
+      <a href="/meus_atendimentos" style={styles.toolbarLink}>
+        Meus Atendimentos
       </a>
       <a href="/agenda" style={styles.toolbarLink}>
         Agenda
@@ -91,6 +97,12 @@ class App extends Component {
             />
             <Route path="/meus_atendimentos" component={MyAttendances} />
             <Route path="/cadastrar_ponto" component={RegisterAttendance} />
+            <Route
+              path="/editar_ponto"
+              render={props => <RegisterAttendance isEdit />}
+            />
+            <Route path="/notificacoes" component={Notificacoes} />
+            <Route path="/agenda" component={Calendar} />
           </Router>
         </div>
       </Sidebar>

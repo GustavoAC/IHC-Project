@@ -6,14 +6,28 @@ import AttendanceCard from "../components/AttendanceCard";
 
 const mockData = [
   {
-    url: "abc",
-    name: "Atendimento Odontológico Estudantil",
-    location: "Setor 4, UFRN"
+    url: "/atendimentos/a",
+    name: "Atendimento Odontológico da UFRN",
+    hour: "13:00 - 17:00",
+    location: "Av. Sen. Salgado Filho, 3000 - Candelária, Setor 4"
   },
   {
-    url: "abcd",
-    name: "Atendimento Odontológico Estudantil",
-    location: "Setor 4, UFRN"
+    url: "/atendimentos/b",
+    name: "Atendimento Geriátrico Solidário",
+    hour: "8:00 - 12:00",
+    location: "Rua João Limeira Silva, 110"
+  },
+  {
+    url: "/atendimentos/c",
+    name: "Atendimento Psicológico a baixo custo",
+    hour: "8:00 - 17:00",
+    location: "Av. Sen. Afonso Guerra, 504"
+  },
+  {
+    url: "/atendimentos/d",
+    name: "Atendimento Odontólogico Fácil",
+    hour: "12:00 - 18:00",
+    location: "Rua Alameda das Flores, 403"
   }
 ];
 
@@ -33,9 +47,11 @@ const retrieveKey = item => item.url;
 const AttendanceList = () => {
   return (
     <Div style={{ flexDirection: "column" }}>
-      <Text fontSize="30px" fontWeight="bold" toCenter>
-        Lista de Atendimentos
-      </Text>
+      <Div style={{ padding: "20px", justifyContent: "center" }}>
+        <Text fontSize="30px" fontWeight="bold" toCenter>
+          Lista de Atendimentos
+        </Text>
+      </Div>
       <Div style={{ width: "1000px", alignSelf: "center" }}>
         <List data={mockData} render={renderItem} retrieveKey={retrieveKey} />
       </Div>

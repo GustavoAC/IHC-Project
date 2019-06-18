@@ -36,7 +36,8 @@ const TextInputWLabel = props => {
     placeholder,
     icon,
     value,
-    onChange
+    onChange,
+    customStyle
   } = props;
 
   const styleError = validator(value) ? {} : styles.error;
@@ -53,7 +54,7 @@ const TextInputWLabel = props => {
   };
 
   return (
-    <label style={{ color: colors.black, width: "100%" }}>
+    <label style={{ color: colors.black, width: "100%", ...customStyle }}>
       {tipItem} {label}
       <input
         value={value}
@@ -74,7 +75,8 @@ TextInputWLabel.propTypes = {
   value: PropTypes.any.isRequired,
   validator: PropTypes.func,
   noBottomMargin: PropTypes.bool,
-  tip: PropTypes.string
+  tip: PropTypes.string,
+  customStyle: PropTypes.any
 };
 
 TextInputWLabel.defaultProps = {
@@ -83,7 +85,8 @@ TextInputWLabel.defaultProps = {
   onChange: () => {},
   noBottomMargin: false,
   placeholder: "",
-  tip: undefined
+  tip: undefined,
+  customStyle: {}
 };
 
 export default TextInputWLabel;

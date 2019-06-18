@@ -55,6 +55,7 @@ class Navbar extends PureComponent {
     return (
       <Div
         style={{
+          cursor: "pointer",
           justifyContent: "center",
           alignItems: "center",
           margin: "0px 0px 0px 5px"

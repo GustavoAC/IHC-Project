@@ -59,7 +59,7 @@ class FormLogin extends Component {
           <Text fontWeight="bold" fontSize="26px">
             Login
           </Text>
-          <Text>Continue with Facebook or e-mail</Text>
+          <Text>Continue com Facebook ou e-mail</Text>
         </Div>
         <Div
           style={{
@@ -78,7 +78,7 @@ class FormLogin extends Component {
           />
 
           <TextInput
-            placeholder="Password"
+            placeholder="Senha"
             onChange={text =>
               this.setState(prevState => ({ ...prevState, password: text }))
             }
@@ -91,9 +91,10 @@ class FormLogin extends Component {
               flexDirection: "column"
             }}
           >
-            <Button type="green" text="Login" onClick={() => {}} />
+            <Button type="green" text="Login" href="/" />
             <Button
               type="facebook"
+              href="/"
               icon={faFacebook}
               text="Continue com o Facebook"
             />

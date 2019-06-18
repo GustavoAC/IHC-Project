@@ -5,24 +5,9 @@ import {
   faShareAlt
 } from "@fortawesome/free-solid-svg-icons";
 import Div from "../components/Div";
-import List from "../components/List";
 import Text from "../components/Text";
-import AttendanceCard from "../components/AttendanceCard";
 import Map from "../components/Map";
 import Button from "../components/Button";
-
-const mockData = [
-  {
-    url: "abc",
-    name: "Atendimento Odontológico Estudantil",
-    location: "Setor 4, UFRN"
-  },
-  {
-    url: "abcd",
-    name: "Atendimento Odontológico Estudantil",
-    location: "Setor 4, UFRN"
-  }
-];
 
 const styles = {
   header: {

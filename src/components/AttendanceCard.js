@@ -4,10 +4,12 @@ import Div from "./Div";
 import Text from "./Text";
 import Button from "./Button";
 
-const AttendanceCard = ({ name, url, location, hour }) => {
+const AttendanceCard = ({ name, url, location, hour, edit }) => {
+  const buttonText = edit ? "Editar" : "Ver mais";
   return (
     <Div
       style={{
+        backgroundColor: "white",
         border: "1px solid black",
         borderRadius: "4px",
         padding: "10px",
@@ -23,7 +25,7 @@ const AttendanceCard = ({ name, url, location, hour }) => {
         <Text icon={faMapMarker}>{location}</Text>
       </Div>
       <Div style={{ alignItems: "center" }}>
-        <Button type="green" text="Ver mais" href={url} />
+        <Button type="green" text={buttonText} href={url} />
       </Div>
     </Div>
   );

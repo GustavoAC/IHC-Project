@@ -87,9 +87,9 @@ class FormSignup extends Component {
           }}
         >
           <Text fontWeight="bold" fontSize="26px">
-            Come and be part of it!
+            Crie uma conta para ter acesso a mais funções do site!
           </Text>
-          <Text>Create Account</Text>
+          <Text>Criar conta</Text>
         </Div>
         <Div
           style={{
@@ -101,12 +101,12 @@ class FormSignup extends Component {
           }}
         >
           <TextInput
-            placeholder="First Name"
+            placeholder="Primeiro Nome"
             onChange={firstName => this.handleInputChange({ firstName })}
           />
 
           <TextInput
-            placeholder="Last Name"
+            placeholder="Último Nome"
             onChange={lastName => this.handleInputChange({ lastName })}
           />
 
@@ -116,37 +116,31 @@ class FormSignup extends Component {
           />
 
           <TextInput
-            placeholder="Password"
+            placeholder="Senha"
             onChange={password => this.handleInputChange({ password })}
             secured
           />
 
           <TextInput
-            placeholder="Confirm Password"
+            placeholder="Confirmar Senha"
             onChange={confirmPassword =>
               this.handleInputChange({ confirmPassword })
             }
             secured
           />
 
-          <Div>
-            <Text toCenter>Aceito os termos e condições</Text>
-          </Div>
           <Div
             style={{
               marginTop: "20px",
               flexDirection: "column"
             }}
           >
-            <Button
-              type="green"
-              text="Create Account"
-              onClick={() => this.handleSubmit()}
-            />
+            <Button type="green" text="Criar conta" href="/" />
             <Button
               type="facebook"
               icon={faFacebook}
-              text="Sign up with facebook"
+              text="Cadastrar com o Facebook"
+              href="/"
             />
           </Div>
         </Div>
