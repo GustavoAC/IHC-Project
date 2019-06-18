@@ -9,13 +9,15 @@ const mockData = [
     url: "/meus_atendimentos/a",
     name: "Atendimento Odontológico da UFRN",
     hour: "13:00 - 17:00",
-    location: "Av. Sen. Salgado Filho, 3000 - Candelária, Setor 4"
+    location: "Av. Sen. Salgado Filho, 3000 - Candelária, Setor 4",
+    edit: true
   },
   {
     url: "/meus_atendimentos/d",
     name: "Atendimento Odontólogico Fácil",
     hour: "12:00 - 18:00",
-    location: "Rua Alameda das Flores, 403"
+    location: "Rua Alameda das Flores, 403",
+    edit: true
   }
 ];
 

@@ -33,17 +33,17 @@ const Attendance = () => {
       <Div style={{ flexDirection: "column", width: "800px", padding: "20px" }}>
         <Div style={styles.header}>
           <Text fontSize="30px" fontWeight="bold" toCenter>
-            Atendimento Geriátrico
+            Atendimento Odontológico da UFRN
           </Text>
         </Div>
         <Div>
           <Div style={{ flex: 1, flexDirection: "column" }}>
             <Div style={styles.text}>
-              <Text icon={faClock}>7:00 - 11:00</Text>
+              <Text icon={faClock}>13:00 - 17:00</Text>
             </Div>
             <Div style={styles.text}>
               <Text icon={faMapMarker}>
-                Rua llalalloasdkaoskdoa oak oaksdok{" "}
+                Av. Sen. Salgado Filho, 3000 - Candelária, Setor 4
               </Text>
             </Div>
           </Div>
