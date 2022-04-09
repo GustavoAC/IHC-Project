@@ -10,7 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "connected-react-router": "^6.4.0",
     "history": "^4.9.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "radium": "^0.25.2",
     "react": "^16.8.6",
     "react-big-calendar": "^0.21.0",
